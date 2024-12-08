@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: esmira
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 100
+              - column:
+                  name: username
+                  value: admin
+              - column:
+                  name: email
+                  value: testuser@gmail.com
+              - column:
+                  name: password
+                  value: $2a$10$hdaj8tx5n3Dclgmx4YZxl.KnZKKQ4oC6mSrCbMUf3vORi/yUpAYM2
+              - column:
+                  name: full_name
+                  value: Administrator
+              - column:
+                  name: bio
+                  value: 'Admin user for administrating operations'
+              - column:
+                  name: role
+                  value: ROLE_ADMIN
+        - insert:
+            tableName: posts
+            columns:
+              - column:
+                  name: content
+                  value: "Welcome to the social network!"
+              - column:
+                  name: user_id
+                  value: 100
